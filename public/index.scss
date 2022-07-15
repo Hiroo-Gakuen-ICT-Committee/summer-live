@@ -10,12 +10,24 @@ body{
     font-style: italic;
     font-size: 7vw;
     position: absolute;
+    text-shadow: 8px 8px 0px #FFF;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-shadow: 8px 8px 0px #FFF;
-    opacity: 1;
+    opacity:0 ;
+  }
+  .vimeo{
+    width: 160vh;
+    height: 90vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    iframe{
+      width: 160vh;
+    height: 90vh;
+
+    }
   }
 }
