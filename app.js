@@ -21,11 +21,14 @@ const connection = mysql.createConnection({
 });
 
 app.get("/",(req,res)=>{
-  res.render("index.ejs");
   connection.query(
-    'SELECT*FROM media',
+    'SELECT * FROM media ORDER BY id DESC LIMIT 1',
+    
     (errow, result) => {
       console.log(result);
+      res.render("index.ejs", {
+        items: result[0]
+      });
     }
   );
 });
@@ -41,13 +44,10 @@ app.get("/set",(req,res)=>{
 });
 
 app.post("/vimeo",(req,res)=>{
-  console.log(req.body);
   connection.query(
-    'SELECT*FROM INSERT INTO media (name) VALUES (?);',
+    'INSERT INTO media (name) VALUES (?);',
     [req.body.name],
     (errow, result) => {
-      console.log(errow);
-      console.log(req.body);
       res.redirect("/set");
     }
   );
