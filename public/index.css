@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Mobo";
+  src: url("/MOBO.ttf") format("truetype");
+}
+body {
+  background-color: black;
+}
+body .title1 {
+  color: #FF0000;
+  font-family: Mobo;
+  font-style: italic;
+  font-size: 7vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-shadow: 8px 8px 0px #FFF;
+  opacity: 1;
+}
